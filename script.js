@@ -35,6 +35,7 @@ for (let i = 0; i < operators.length; i++) {
         else {
             alert('Please enter your first number!')
         }
+       
 
       })
     }
@@ -49,9 +50,7 @@ for (let i = 0; i < numbers.length; i++) {
             } else {
                 num2 += numbers[i].textContent;
                 console.log(num2)
-
             } 
-
 
           })
         } 
@@ -59,10 +58,14 @@ for (let i = 0; i < numbers.length; i++) {
  equal.addEventListener('click', ()=> {
     if (num1 == ``) {
         alert(`Please enter your first number!`)
+        display.textContent = ``
+
      } else if (num2 == ``) {
         alert(`Please enter your second number!`)
-        num1 = ``
-        num2 = ``
+        num1 = ` `
+        num2 = ` `
+
+
      } 
      sum = operateCalculator(Number(num1),Number(num2), operator)
      display.textContent = Number(sum)
@@ -78,4 +81,5 @@ clear.addEventListener("click", () => {
     num1 = ``
     num2 = ``
     operator = ``
+    sum = ``
 })
