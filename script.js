@@ -9,6 +9,8 @@ let num2 = ``;
 let operator = ``;
 let sum = ``;
 
+// make dividing 0 impossible
+// make sum usable further 
 
 function operateCalculator(num1, num2, operator){
     switch (operator) {
@@ -49,7 +51,7 @@ for (let i = 0; i < numbers.length; i++) {
                 num2 += numbers[i].textContent;
                 console.log(num2)
 
-            }
+            } 
 
           })
         } 
