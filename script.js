@@ -22,7 +22,6 @@ function operateCalculator(num1, num2, operator){
         case '/':
             return num1 / num2
     }
-    console.log(num1, num2, operator)
 }
 
 
@@ -43,13 +42,24 @@ for (let i = 0; i < operators.length; i++) {
 for (let i = 0; i < numbers.length; i++) {
         numbers[i].addEventListener('click' , () => {
             display.textContent += numbers[i].textContent
-            if (operator == ``) {
-                num1 += numbers[i].textContent;
-                console.log(num1)
+            if (sum !== ``){
+                num2 = ``
+                operator = ``
+                sum = ``
+                num1 = numbers[i].textContent;
+                display.textContent = num1 
 
-            } else {
+                return
+
+            }
+            if (operator == `` && sum == ``) {
+                num1 += numbers[i].textContent;
+
+
+            } 
+            
+            else {
                 num2 += numbers[i].textContent;
-                console.log(num2)
             } 
 
           })
@@ -59,16 +69,17 @@ for (let i = 0; i < numbers.length; i++) {
     if (num1 == ``) {
         alert(`Please enter your first number!`)
         display.textContent = ``
+        return
 
      } else if (num2 == ``) {
         alert(`Please enter your second number!`)
-        num1 = ` `
         num2 = ` `
+        return
 
-
-     } 
+     }  
      sum = operateCalculator(Number(num1),Number(num2), operator)
      display.textContent = Number(sum)
+     
         if (sum !== ``){
             num1 = Number(sum)
             num2 = ``;
