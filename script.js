@@ -10,7 +10,6 @@ let operator = ``;
 let sum = ``;
 
 // make dividing 0 impossible
-// make sum usable further 
 
 function operateCalculator(num1, num2, operator){
     switch (operator) {
@@ -53,6 +52,7 @@ for (let i = 0; i < numbers.length; i++) {
 
             } 
 
+
           })
         } 
 
@@ -63,9 +63,13 @@ for (let i = 0; i < numbers.length; i++) {
         alert(`Please enter your second number!`)
         num1 = ``
         num2 = ``
-     }
+     } 
      sum = operateCalculator(Number(num1),Number(num2), operator)
-     display.textContent = sum
+     display.textContent = Number(sum)
+        if (sum !== ``){
+            num1 = Number(sum)
+            num2 = ``;
+        }
 
  })
 
