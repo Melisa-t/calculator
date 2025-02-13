@@ -103,7 +103,7 @@ for (let i = 0; i < numbers.length; i++) {
      display.textContent = Number(sum.toFixed(4))
      
         if (sum !== ``){
-            num1 = Number(sum)
+            num1 = Number(sum.toFixed(4))
             num2=``
         } 
     operator = ``
