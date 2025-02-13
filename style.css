@@ -30,7 +30,11 @@ body {
     min-height: 18%;
     background-color: #EBE3D5;
     border: 2px solid #B0A695;
-
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+    font-size: 2rem;
 }
 
 #controls-container {

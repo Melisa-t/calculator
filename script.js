@@ -55,8 +55,6 @@ for (let i = 0; i < numbers.length; i++) {
  equal.addEventListener('click', ()=> {
      sum = operateCalculator(Number(num1),Number(num2), operator)
      display.textContent = sum
-
-
  })
 
 clear.addEventListener("click", () => {
