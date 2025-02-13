@@ -63,9 +63,8 @@ for (let i = 0; i < operators.length; i++) {
 
 for (let i = 0; i < numbers.length; i++) {
         numbers[i].addEventListener('click' , () => {
-            display.textContent += numbers[i].textContent
-            if (sum !== ``){
-                num2 = ``
+           
+            if (sum !== `` && operator == ``){
                 operator = ``
                 sum = ``
                 num1 = numbers[i].textContent;
@@ -84,6 +83,7 @@ for (let i = 0; i < numbers.length; i++) {
                 num2 += numbers[i].textContent;
             } 
 
+            display.textContent += numbers[i].textContent
           })
         } 
 
@@ -104,9 +104,9 @@ for (let i = 0; i < numbers.length; i++) {
      
         if (sum !== ``){
             num1 = Number(sum)
-            num2 = ``;
-        }
-
+            num2=``
+        } 
+    operator = ``
  })
 
 clear.addEventListener("click", () => {
