@@ -9,18 +9,40 @@ let num2 = ``;
 let operator = ``;
 let sum = ``;
 
+function addNumbers (num1, num2) {
+    return num1 + num2
+}
+
+function substractNumbers (num1, num2) {
+    return num1 - num2
+}
+
+function multiplyNumbers (num1, num2) {
+    return num1 * num2
+}
+
+function divideNumbers (num1, num2) {
+    if (num1 == 0 || num2 == 0) {
+        alert(`You know that's not possible!`)
+        return 0
+    } else {
+        return num1 / num2
+    }
+    
+}
+
 // make dividing 0 impossible
 
 function operateCalculator(num1, num2, operator){
     switch (operator) {
         case '+':
-            return num1 + num2 
+            return addNumbers(num1,num2)
         case '-':
-            return num1 - num2
+            return substractNumbers(num1,num2)
         case '*':
-            return num1 * num2
+            return multiplyNumbers(num1,num2)
         case '/':
-            return num1 / num2
+            return divideNumbers(num1,num2)
     }
 }
 
@@ -78,7 +100,7 @@ for (let i = 0; i < numbers.length; i++) {
 
      }  
      sum = operateCalculator(Number(num1),Number(num2), operator)
-     display.textContent = Number(sum)
+     display.textContent = Number(sum.toFixed(4))
      
         if (sum !== ``){
             num1 = Number(sum)
