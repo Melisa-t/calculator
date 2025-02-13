@@ -47,7 +47,7 @@ body {
     flex-wrap: wrap;
 }
 
-.number-btn {
+.btn {
     width: 33.33%;
     height: 25%;
     display: flex;
@@ -73,13 +73,13 @@ body {
 
 }
 
-.number-btn:hover, .operator-btn:hover {
+.btn:hover, .operator-btn:hover {
     background-color: #B0A695;
     color:#EBE3D5;
     cursor: pointer;
 }
 
-.number-btn:active, .operator-btn:active {
+.btn:active, .operator-btn:active {
     background-color: #EBE3D5;
     color:#B0A695;
 }
