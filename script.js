@@ -53,8 +53,16 @@ for (let i = 0; i < numbers.length; i++) {
         } 
 
  equal.addEventListener('click', ()=> {
+    if (num1 == ``) {
+        alert(`Please enter your first number!`)
+     } else if (num2 == ``) {
+        alert(`Please enter your second number!`)
+        num1 = ``
+        num2 = ``
+     }
      sum = operateCalculator(Number(num1),Number(num2), operator)
      display.textContent = sum
+
  })
 
 clear.addEventListener("click", () => {
