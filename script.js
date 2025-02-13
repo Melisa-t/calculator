@@ -25,13 +25,15 @@ function operateCalculator(num1, num2, operator){
 }
 
 
-
-
 for (let i = 0; i < operators.length; i++) {
     operators[i].addEventListener('click' , () => {
-        display.textContent += operators[i].textContent
-        operator = operators[i].textContent
-        console.log(operator)
+        if (num1 !== `` || operator !== ``) {
+            display.textContent = `${num1} ` + operators[i].textContent + ` `
+            operator = operators[i].textContent
+        }
+        else {
+            alert('Please enter your first number!')
+        }
 
       })
     }
