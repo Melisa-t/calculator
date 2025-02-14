@@ -31,7 +31,6 @@ function divideNumbers (num1, num2) {
     
 }
 
-// make dividing 0 impossible
 
 function operateCalculator(num1, num2, operator){
     switch (operator) {
