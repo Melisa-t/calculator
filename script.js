@@ -48,17 +48,24 @@ function operateCalculator(num1, num2, operator){
 
 for (let i = 0; i < operators.length; i++) {
     operators[i].addEventListener('click' , () => {
+        if (num1 !==`` && num2 !== `` && operator !== ``){
+            console.log(num1, num2, operator)
+            operator=operators[i].textContent
+            sum=``
+            num2=``
+        }
         if (num1 !== `` || operator !== ``) {
             display.textContent = `${num1} ` + operators[i].textContent + ` `
             operator = operators[i].textContent
         }
+       
         else {
             alert('Please enter your first number!')
         }
-       
-
+    
       })
     }
+
 
 for (let i = 0; i < numbers.length; i++) {
         numbers[i].addEventListener('click' , () => {
