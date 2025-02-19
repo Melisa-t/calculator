@@ -49,7 +49,6 @@ function operateCalculator(num1, num2, operator){
 for (let i = 0; i < operators.length; i++) {
     operators[i].addEventListener('click' , () => {
         if (num1 !==`` && num2 !== `` && operator !== ``){
-            console.log(num1, num2, operator)
             operator=operators[i].textContent
             sum=``
             num2=``
@@ -94,12 +93,12 @@ for (let i = 0; i < numbers.length; i++) {
         } 
 
  equal.addEventListener('click', ()=> {
-    if (num1 == ``) {
+    if (num1 === ``) {
         alert(`Please enter your first number!`)
         display.textContent = ``
         return
 
-     } else if (num2 == ``) {
+     } else if (num2 === ``) {
         alert(`Please enter your second number!`)
         num2 = ` `
         return
@@ -107,7 +106,8 @@ for (let i = 0; i < numbers.length; i++) {
      }  
      sum = operateCalculator(Number(num1),Number(num2), operator)
      display.textContent = Number(sum.toFixed(4))
-     
+
+
         if (sum !== ``){
             num1 = Number(sum.toFixed(4))
             num2=``
