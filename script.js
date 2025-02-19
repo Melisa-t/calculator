@@ -93,7 +93,7 @@ for (let i = 0; i < numbers.length; i++) {
         } 
 
  equal.addEventListener('click', ()=> {
-    if (num1 === ``) {
+    if (num1 === `` || num1 === null || num1 === undefined) {
         alert(`Please enter your first number!`)
         display.textContent = ``
         return
